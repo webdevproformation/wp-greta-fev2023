@@ -26,6 +26,12 @@
                         <h2 class="card-header">
                             <?php echo $post->post_title ?>
                         </h2>
+                        <!-- thumbnail : miniature -->
+                        <?php echo the_post_thumbnail( "medium", ["class" => "img-fluid"] ) ?>
+                        <div class="card-body">
+                            <?php the_excerpt() ?>
+                        </div>
+                        <?php edit_post_link("modifier") ?>
                     </div>
                 </article>
             <?php endwhile ?>
