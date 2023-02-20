@@ -232,6 +232,69 @@ pour récupérer tout le contenu associé à cette page
 https://github.com/webdevproformation/wp-greta-fev2023
 
 
+back office => très riche 
+
+créer un dossier dans le themes 
+
+créer des fichiers qui vont avoir des noms biens spécifiques 
+
+utiliser des fonctions spéciales de wordpress 
+
+wp_head()
+wp_footer()
+
+have_post() the_post() => while () {
+
+the_excerpt()
+the _post_thumbnail()
+edit_post_link()
+$post->post_title => the_title()
+the_date()
+}
+
+hook => permet de modifier le comportement par défaut du CMS
+
+add_action("event" , function(){} )
+
+-----------
+
+lien => permalien  (wordpress permet de personnaliser les liens hypertexte de vos pages du front )
+
+http://localhost/demo/?page=10 
+http://localhost/demo/mario  (slug)
+http://localhost/demo/20/02/2023/mario
+
+
+=> paramètrable dans le back office 
+Back office => réglages => 
+
+=> chaque permalien en fonction de forme
+
+http://localhost/demo/ => page d'accueil
+http://localhost/demo/nouvel-article/ => page de type article 
+
+http://localhost/demo/categorie/nouvel-article/
+
+http://localhost/demo/autor/malik => 
+
+template hierarchie => template hiérarchie 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

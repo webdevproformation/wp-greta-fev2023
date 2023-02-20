@@ -38,6 +38,9 @@
                         <div class="card-body">
                             <?php the_excerpt() ?>
                         </div>
+                        <div>
+                            <?php the_date() ?>
+                        </div>
                         <?php edit_post_link("modifier") ?>
                     </div>
                 </article>
