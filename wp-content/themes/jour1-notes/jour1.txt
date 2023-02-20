@@ -1,0 +1,240 @@
+Malik HARRIZ
+malik.h@webdevpro.net 
+
+
+Wordpress => codage 
+
+=> Wordpress => logiciel qui permet de gérer des sites internet 
+=> CMS => Content Management System (en fr SGC => Système de Gestion de Contenu)
+
+les concurrents de Wordpress :
+Prestashop 
+Drupal
+Joomla
+Wix 
+
+=> Wordpress en 2023 => 43 % des sites internet (très très apprécié et très utilisé)
+
+=> site internet qui sont divisés en 2 parties :
+- front office (fo) => partie publique du site internet (visiteur peut voir tout ce qui est dans cette partie)
+- back office (bo) => partie privée du site internet => il faut AU PREALABLE s'être identifié via un login / password 
+dans cette partie privée, seul les administrateurs / gestionnaires du site ont accès
+et gérér les pages visibles dans le front office 
+=> créer des pages / modifier des pages / supprimer des pages 
+=> gérer le menu 
+=> modérer des commentaires  .... 
+  
+Dans le back office on distingue les gestionnaires via leur ROLE
+=> le role qui a le plus de DROITS => Administrateur 
+=> rédacteur / éditeur / utilisateurs inscrits
+
+=> Wordpress est un projet codé en PHP 
+=> il a besoin d'un serveur Apache + module PHP 
+=> en + il a besoin d'une base de données MySQL / MariaDB 
+
+=> dépendance 
+
+=> Local (outil qui permet d'avoir Apache + module PHP + MySQL  )
+=> https://localwp.com/ + paramètrage + les téléchargements 
+
+réseau wifi :
+
+TP-Link_DABF_5G
+16799028
+
+
+--------------------
+
+Installer wordpress MANUELLEMENT 
+
+XAMPP / MAMP  / WAMP
+
+=> Démarrer votre serveur 
+=> Démarrer les services Apache et MySQL 
+
+
+-----------------
+problème et solution MySQL :
+
+CREATE USER 'malik'@'%' IDENTIFIED BY 'malik';
+GRANT ALL PRIVILEGES ON *.* TO 'malik'@'%' WITH GRANT OPTION;
+flush privileges;
+-----------------
+
+=> créer une base de données => CREATE DATABASE wordpress ;
+=> client SQL => phpMyAdmin (site internet) qui permet d'exécuter des requêtes SQL ; 
+
+=> cliquer sur le bouton admin (ligne mySQL)
+=> http://localhost/phpmyadmin/ (windows)
+=> http://localhost:8888/phpmyadmin/ (MacOS)
+
+créer une base => 
+nom : wordpress
+encodage utf8mb4_general_ci 
+
+
+CREATE USER 'wordpress'@'localhost' IDENTIFIED VIA mysql_native_password USING '***';GRANT USAGE ON *.* TO 'wordpress'@'localhost' REQUIRE NONE WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;GRANT ALL PRIVILEGES ON `wordpress`.* TO 'wordpress'@'localhost'; 
+
+
+=> https://wordpress.org/download/
+
+=> c:\xampp\htdocs\
+=> créer un dossier => demo 
+
+=> télécharger le code de wordpress (zip)
+=> déplacer dans le dossier demo
+
+wp-admin (code source du back office)
+wp-content (front)
+wp-includes (librairies)
+wp-.... .php  plein de fichiers php 
+
+
+http://localhost/demo
+http://localhost:8888/demo
+
+=> liaison entre Wordpress et la base de données 
+
+=> une fois que vous avez installé wordpress
+=> back office
+=> front office
+
+=> front office est composé de 2 pages 
+=> par défaut page d'accueil / page d'exemple 
+(lors de l'installation par défaut)
+
+=> barre latérale => 
+Article => CRUD 
+Média => image / pdf / wordpress => CRUD
+Page => 
+Article est un contenu "classable" => associer à une catégorie / tag (etiquette)
+Page est un contenu non classage 
+
+=> Page  => url 
+=> remplir d'une Page
+=> remplir d'un article
+=> remplir de plusieurs articles 
+
+blog => weB Log => journal intime sur internet 
+
+commentaire => laisser une remarque sur les articles (post)
+
+Apparence => modifier l'apparence visuelle du front office 
+
+=> objectif du cours => comment fonctionnent les THEMES Wordpress ???
+=> Astra 
+
+Extensions (plugin) => capacité d'ajouter de nouvelles fonctionnalités à votre site internet 
+WooCommerce => transformer votre blog => site commerce 
+=> catalogue / Panier / espace privé voir sa commande
+tunnel / choisir un livreur / choisir un moyen de paiement
+
+https://wordpress.org/plugins/ => 60 000 
+Elementor 
+
+
+ Comptes => liste des profils gestionnaires du site 
+
+
+Outil => outil intéressant pour migration du site internet
+importer et export (données / fichiers ) site vers un autre 
+
+	    => Effacer les données => RGPD 
+
+	site internet collectés informations sur les comportements de ses utilisateurs 
+=> créer un profil (login / password / heure de connection)
+=> laisser un commentaire (email / commentaire / quand)
+=> commandes / l'adresse de livraison / email / téléphone 
+
+=> depuis 5 ans, l'Union Européenne 
+=> force tous les sites dire clairement QUELLES informations sont stockées par le site 
+=> demande au site de les supprimer FACILEMENT / ou au minimum les anonymiser 
+
+=> réglages => paramètrages globaux sur votre site internet
+
+la langue / format des dates / comment les urls sont gérés dans le front 
+permalien (permalink) => url permanent
+
+Gutenberg => nouveau outil de création d'article / page 
+
+créer un nouvel article = > 
+nom : article 1
+
+cet article contient plusieurs bloc 
+bloc de texte qui contient 30 mots de votre choix
+bloc de liste avec numération 
+    cette liste contient 4 éléments de 3 textes chacun
+bloc de deux colonnes 
+	sur la colone de gauche => mettre une image
+  sur  la colonne de droite => ajouter une vidéo Youtube 
+
+bloc de titre de niveau 2 contenant 3 mots 
+ une galerie photos avec 5 images de votre choix
+ 
+<ol>
+	<li>lorem ipsum lorem ipsum</li>
+</ol>
+
+support de cours : 
+https://formation.webdevpro.net/wordpress-dev
+login : wordpress
+password : dev
+
+
+Visual Studio Code => sélectionner le dossier 
+c:\xampp\htdocs\demo 
+
+wp-admin => back office 
+	on ne touche pas
+wp-content => front office 
+	languages => traductions du site 
+   plugins => fonctionnalités en + du site xxxx
+   themes => apparence visuel  xxxxx
+   uploads => toutes les médias sont stockés
+    (dans ce dossier que l'on va réaliser 
+      des modifications)
+wp-includes 
+	 toutes les librairies utilisées par wordpress
+    on ne touche pas 
+		
+.htaccess => manipulation des urls
+wp-config.php (relation entre wp <=> base de données)
+
+wp-login.php => formulaire pour accéder au back
+office de votre site 
+
+
+----------
+
+créer un thème 
+créer un dossier dans le dossier 
+wp-content/themes => first 
+
+dans ce dossier créer 3 fichiers (bien respecter 
+les noms des fichiers )
+functions.php 
+index.php 
+style.css 
+
+
+ <?php wp_head() ?>
+ <?php wp_footer() ?>
+=> ajouter la barre de raccourci de wordpress
+
+Loop (boucle php)
+Automatique lorsqu'une page wordpress est 
+lancée 
+Wordpress va AUTOMATIQUEMENT réaliser une 
+requête SQL 
+pour récupérer tout le contenu associé à cette page 
+
+
+https://github.com/webdevproformation/wp-greta-fev2023
+
+
+
+
+
+
+
+
