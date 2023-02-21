@@ -12,15 +12,7 @@
                 </select>
                 <input type="submit" class="btn btn-primary mt-3 btn-sm" value="trier">
             </form>
-            <?php 
-            
-            $args = array(
-                "category_name" => "html" ,
-                'orderby' => 'title',
-                'order'   => $_GET["order"] ?? "ASC"
-            );
-            ?>
-            <?php $query =  new WP_Query($args) ?>
+            <?php $query =  get_article_filtered("html") ?>
         </aside>
         <div class="col">
             <?php // var_dump($query) ?>
@@ -37,7 +29,7 @@
                             </div>
                             <?php the_category() ?>
                         </div>
-                        <?php wp_reset_postdata(); ?>
+                        <?php wp_reset_postdata(); ?><!--  libérer la mémoire si j'ai besoin de faire une requête WP_Query() supplémentaire après -->
                     <?php endwhile ?>
             </div>
         </div>  

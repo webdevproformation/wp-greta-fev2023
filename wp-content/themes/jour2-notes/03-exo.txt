@@ -1,0 +1,21 @@
+
+créer dans le back office 3 articles 
+
+titre de votre choix
+contenu de votre choix 
+image à la une de votre choix 
+chacun aura une date de publication différente
+catégorie soit react  / angular / node (au deux)
+
+--- 
+créer le fichier category-react.php 
+
+colonne de filtrage 
+formulaire dans lequel vous allez pouvoir choisir une date 
+descroissant ou croissant 
+colonne qui afficher les articles concernés 
+
+ajouter une lien vers cette page dans la barre de menu dans le menu déroulant catégorie 
+
+
+

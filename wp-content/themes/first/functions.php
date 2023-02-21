@@ -33,3 +33,19 @@ function get_page_url(string $titre_page):string {
 function get_category_url(string $slug):string {
     return get_tag_link(get_category_by_slug($slug)->term_id);
 }
+
+/**
+ * retourne un objet WP_Query pour une catégorie trier par titre croissant ou décroissant 
+ *
+ * @param string $slug_categorie
+ * @return WP_Query
+ */
+function get_article_filtered(string $slug_categorie) :WP_Query {
+    // https://developer.wordpress.org/reference/classes/wp_query/
+    $args = array(
+        "category_name" => $slug_categorie ,
+        'orderby' => 'title',
+        'order'   => $_GET["order"] ?? "ASC"
+    );
+    return new WP_Query($args);
+}

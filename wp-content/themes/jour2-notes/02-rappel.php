@@ -12,3 +12,4 @@ if(isset($a) ){
 }
 
 echo $a ?? "je suis inférieur à 10 ";
+
