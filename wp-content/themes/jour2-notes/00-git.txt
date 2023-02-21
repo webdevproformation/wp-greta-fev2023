@@ -31,3 +31,14 @@ git remote add origin <https://url.git>
 
 git push -u origin main 
 # envoyé les enregistrements du repository local vers le répository distant (sur github.com)
+
+créer un projet + fichier index.html + codage dedans 
+=> lancer un terminal qui doit être ouvert à la racine (root folder ) de mon projet
+
+au fur et à mseure de l'avancée du projet 
+
+git add --all 
+git commit -m "ajouter un fichier style.css"
+git push
+
+git reset --hard HEAD~4

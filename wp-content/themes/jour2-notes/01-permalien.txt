@@ -1,0 +1,28 @@
+url => pour passer d'une page à une autre 
+
+wordpress => permalien (il est possible de choisir l'aspect de l'url )
+
+=> dans wordpress un lien => un type de contenu 
+
+=> en fonction du lien que vous allez utiliser 
+=> wordpress va l'associer avec un fichier SPECIAL dans le dossier du thème actif 
+
+=> TEMPLATE HIERARCHIE 
+
+=> https://formation.webdevpro.net/wordpress-dev 
+login : wordpress 
+mdp : dev
+
+=> dans le chapitre 3 => 
+
+schéma => qui se lie de gauche à droite 
+
+=> bloc gris => définir les grands types de liens (5 grandes familles)
+
+page => http://localhost/demo/condition-generale 
+=> a été créé dans le back office dans la section Page 
+
+
+=> http://localhost/demo/wp-login.php
+
+
