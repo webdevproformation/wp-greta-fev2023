@@ -21,12 +21,22 @@
                 <li class="nav-item">
                     <a href="<?= get_option("home") ?>" class="nav-link">Accueil</a>
                 </li>
-                <li class="nav-item">
-                    <a href="<?= get_page_url("exemple 1") ?>" class="nav-link">exemple 1</a>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle"  data-bs-toggle="dropdown">pages</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item">
+                            <a href="<?= get_page_url("exemple 1") ?>">exemple 1</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="<?= get_page_url("exemple 2") ?>">exemple 2</a>
+                        </li>
+                    </ul>
                 </li>
+                
                 <li class="nav-item">
                     <a href="<?= get_page_url("condition générale") ?>" class="nav-link">conditions générales</a>
                 </li>
+                <!-- sharemycode.fr/164 -->
                 <li class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" 
                         data-bs-toggle="dropdown">catégories</a>

@@ -60,3 +60,13 @@ pour cette page créer la page category-php.php
 
 => pour cette page le fond de page soit noir et que le texte soit blanc 
 le menu soit sur fond blanc avec texte noir
+
+-------------------------------
+
+cas pratique :
+
+ajouter un nouveau menu déroulant dans le menu :
+
+Page 
+    Exemple 1
+    Exemple 2 
