@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
     <link 
         rel="stylesheet" 
-        href="<?php echo get_template_directory_uri() ?>/style.css">
+        href="<?php echo get_template_directory_uri() ?>/style.css?v=1">
         <!-- get_template_directory_uri() 
             http://localhost/demo/wp-content/themes/first
         -->
@@ -30,6 +30,9 @@
                 
                 <li class="nav-item">
                     <a href="<?= get_category_url("html") ?>" class="nav-link">tous les articles sur le html</a>
+                </li>
+                <li class="nav-item">
+                    <a href="<?= get_category_url("php") ?>" class="nav-link">tous les articles sur le php</a>
                 </li>
             </ul>
         </nav>

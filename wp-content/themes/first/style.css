@@ -25,3 +25,17 @@
         transform: translateX(0px);
      }
 }
+
+
+.category-php{
+    background: black !important;
+    color :white !important;
+}
+
+.category-php .bg-primary{
+    background: white !important;
+}
+
+.category-php .bg-primary a{
+    color:black;
+}
