@@ -27,12 +27,17 @@
                 <li class="nav-item">
                     <a href="<?= get_page_url("condition générale") ?>" class="nav-link">conditions générales</a>
                 </li>
-                
-                <li class="nav-item">
-                    <a href="<?= get_category_url("html") ?>" class="nav-link">tous les articles sur le html</a>
-                </li>
-                <li class="nav-item">
-                    <a href="<?= get_category_url("php") ?>" class="nav-link">tous les articles sur le php</a>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" 
+                        data-bs-toggle="dropdown">catégories</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item">
+                            <a href="<?= get_category_url("html") ?>">html</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="<?= get_category_url("php") ?>">php</a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </nav>
