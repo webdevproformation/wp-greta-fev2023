@@ -1,0 +1,33 @@
+git outil en ligne de commande qui s'excute via 
+- cmd / invite de commande (windows)
+- shell => (linux)
+- terminal => MacOS 
+
+=> est ce que git est installé dans mon ordinateur ? 
+
+git --version 
+
+=> git version 2.39.2.windows.1 => ok installé 
+=> commande inconnue => installé 
+
+git init 
+# git init commande qui permet de créer un repository local (dans l'ordinateur)
+# dans lequel on va versionner notre projet 
+# cette commande est à saisir 1 seule fois lors du lancement du projet
+
+git add --all 
+# on veut que tous les fichiers du projet soit versionné 
+
+git commit -m "description libre"
+# on veut que tous les fichiers soient enregitrés (commiter) dans le repository local 
+
+=> créer un répository sur github.com 
+
+git branch -M main 
+# la branch en cours doit s'appeler main
+
+git remote add origin <https://url.git>
+# ajouter une connexion avec un repository stocké sur github.com  
+
+git push -u origin main 
+# envoyé les enregistrements du repository local vers le répository distant (sur github.com)
