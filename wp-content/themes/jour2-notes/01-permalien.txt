@@ -46,3 +46,17 @@ entre le header et le footer réaliser une Loop while(have_posts()){}
 titre 
 trait de séparation => <hr> 
 contenu de le page 
+
+
+la différence entre les pages et les articles =>
+articles sont des contenus classables (auxquels on peut associer une catégorie et ou un tag )
+
+-----------------------
+
+ajouter un nouveau lien dans la barre de menu qui permet d'afficher 
+tous les articles associés à la catégorie PHP
+
+pour cette page créer la page category-php.php 
+
+=> pour cette page le fond de page soit noir et que le texte soit blanc 
+le menu soit sur fond blanc avec texte noir

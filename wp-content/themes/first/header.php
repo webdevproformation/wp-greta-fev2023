@@ -16,9 +16,21 @@
 </head>
 <body <?php body_class() ?>><!-- gérer automatique une class en fonction de la page actuellement affichée -->
     <header class="bg-primary">
-        <nav class="navbar navbar-expand container navbar-dark">
+        <nav class="navbar navbar-expand container navbar-light">
             <ul class="navbar-nav">
-                <li class="nav-item"><a href="" class="nav-link">Accueil</a></li>
+                <li class="nav-item">
+                    <a href="<?= get_option("home") ?>" class="nav-link">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a href="<?= get_page_url("exemple 1") ?>" class="nav-link">exemple 1</a>
+                </li>
+                <li class="nav-item">
+                    <a href="<?= get_page_url("condition générale") ?>" class="nav-link">conditions générales</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="<?= get_category_url("html") ?>" class="nav-link">tous les articles sur le html</a>
+                </li>
             </ul>
         </nav>
     </header>
