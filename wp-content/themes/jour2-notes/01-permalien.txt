@@ -26,3 +26,23 @@ page => http://localhost/demo/condition-generale
 => http://localhost/demo/wp-login.php
 
 
+=> dans le back office => créer une nouvelle page qui s'appelle 
+titre condition générale
+slug => condition-generale 
+
+dans la zone de contenu 
+un p avec 30 mots 
+image de votre choix 
+titre de niveau 2 avec 4 mots 
+un p avec avec 30 mots 
+
+ publier
+
+créer dans le dossier first un fichier page-condition-generale.php 
+
+importer header et le footer 
+entre le header et le footer réaliser une Loop while(have_posts()){}
+
+titre 
+trait de séparation => <hr> 
+contenu de le page 
