@@ -85,3 +85,49 @@ function categorie_badge(int $post_id) : string{
     }
     return $resultat ;
 }
+// http://localhost/demo/wp-admin
+// http://localhost/demo/wp-login.php
+
+function add_formulaire_contact() : string{
+    return "
+        <form method='POST'>
+            <div class='mb-3'>
+                <label for='email'>saisir votre email</label>
+                <input type='email' name='email' class='form-control' id='email'>
+            </div>
+            <div class='mb-3'>
+                <label for='message'>saisir votre message</label>
+                <textarea name='message' class='form-control' id='message' rows='6'></textarea>
+            </div>
+            <input type='submit' class='btn btn-dark' value='envoyer un message'>
+        </form>
+    ";
+}
+
+add_shortcode("form_contact" , "add_formulaire_contact");
+// "form_contact" => mot que l'on va écrire dans le bloc "code court" dans le back office
+// "add_formulaire_contact" => le nom la fonction qui retourne le formulaire 
+
+// ajouter un bloc "code court" => [form_contact]
+
+
+// traitement du formulaire de contact 
+if(!empty($_POST["email"]) && !empty($_POST["message"])){
+
+    global $wpdb ; // il faut respecter le nom de cette variable 
+    // $connexion = new PDO("")
+    $create = $wpdb->prepare("
+        CREATE TABLE IF NOT EXISTS wp_contact (
+            id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+            email VARCHAR(255) ,
+            message TEXT
+        )
+    ");
+    $wpdb->get_row($create);
+    $query = $wpdb->prepare("INSERT INTO wp_contact 
+        (email, message)
+        VALUES
+        (%s, %s)
+    " , [ $_POST["email"] , $_POST["message"] ]);
+     $wpdb->get_row($query);
+}

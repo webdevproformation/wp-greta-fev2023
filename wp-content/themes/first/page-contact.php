@@ -10,7 +10,6 @@
             </div>
         <?php endwhile ?>
     </div>
-
 </main>
 
 <?php get_footer() ?>
