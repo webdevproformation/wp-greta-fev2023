@@ -1,5 +1,6 @@
 <?php get_header() ?>
     <main class="container">
+        <button data-ajaxurl="<?= admin_url( 'admin-ajax.php' ) ?>" class="btn btn-danger vider">vider la session</button>
         <div class="row mt-4">
             <!-- loop wordpress -->
             <?php $i = 0 ; ?>

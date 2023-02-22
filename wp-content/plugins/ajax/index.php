@@ -33,4 +33,14 @@ function exemple_ajax_request (){
     die();
 }
 
-add_action( "wp_ajax_toto" , "exemple_ajax_request") ;
+add_action( "wp_ajax_add" , "exemple_ajax_request") ;
+
+
+function vider_session(){
+    if(!session_id()) session_start();
+    unset($_SESSION["panier"]);
+    echo json_encode("session_vidée");
+    die();
+}
+
+add_action("wp_ajax_empty" , "vider_session");

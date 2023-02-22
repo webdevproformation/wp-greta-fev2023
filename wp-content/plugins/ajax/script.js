@@ -4,7 +4,7 @@
             url : $(this).data("ajaxurl") ,
             method : "POST",
             data : {
-                "action" : "toto", // le suffixe du hook wp_ajax_
+                "action" : "add", // le suffixe du hook wp_ajax_
                 "article" : [$(this).data("id"), $(this).text().trim()]
             },
             success : function(msg){
@@ -12,7 +12,22 @@
             },
             error : function(ex){
                 console.log("error" , ex);
+            }
+        })
+    })
+
+    $(".vider").on("click" , function(){
+        $.ajax({
+            url : $(this).data("ajaxurl") ,
+            data : {
+                "action" : "empty"
             },
+            success : function(msg){
+                console.log("success" , JSON.parse(msg));
+            },
+            error : function(ex){
+                console.log("error" , ex);
+            }
         })
     })
 })(jQuery)
