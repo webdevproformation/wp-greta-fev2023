@@ -1,0 +1,51 @@
+wp => front office 
+
+cliquer des liens => 
+
+http://localhost/demo => index.php => 
+
+http://localhost/demo/category/html/ => category.php => 
+http://localhost/demo/category/react/ => category-react.php / category.php / index.php
+
++ requête automatique sql 
+=> récupérer TOUS les articles 
+
+while(have_posts()){
+the_post()
+
+    the_date()
+    the_title()
+    the_content()
+    the_author()
+    the_category()
+    the_post_thumbnail() => miniature
+    the_excerpt()  => extrait 
+    the_permalink();
+    the_ID(); 
+
+}
+
+
+$query = new WP_Query( ["category" => "react" , "order" => "title" "orderby" => "ASC" , "date_publication" => "2023-02-21"] )
+
+SELECT * FROM wp-posts WHERE date_publication = "2023-02-21" AND category = "react"
+ORDER BY titre ASC 
+
+while($query->have_posts()){
+    $query->the_post()
+}
+
+
+wp_head()
+wp_footer() => barre de raccourci (accessible uniquement pour les gestionnaires du site)
+
+get_header() => require "header.php" wp_head()
+get_footer() => require "footer.php"
+
+body_class() => ajouter dans la balise <body <?php body_class()?> >
+
+<?php echo get_template_directory_uri() ?> => récupérer l'url du dossier de thème 
+à utiliser pour charger de fichiers .js ou des fichiers .css 
+<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/style.css?v=100000" >
+<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/style.css?v=100000" >
+<script src="<?php echo get_template_directory_uri() ?>/script.js?v=100000"></script>

@@ -47,6 +47,9 @@
                         <li class="dropdown-item">
                             <a href="<?= get_category_url("php") ?>">php</a>
                         </li>
+                        <li class="dropdown-item">
+                            <a href="<?= get_category_url("react") ?>">react</a>
+                        </li>
                     </ul>
                 </li>
             </ul>

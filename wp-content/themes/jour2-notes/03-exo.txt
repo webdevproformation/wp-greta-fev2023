@@ -17,5 +17,5 @@ colonne qui afficher les articles concernés
 
 ajouter une lien vers cette page dans la barre de menu dans le menu déroulant catégorie 
 
-
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur vitae quasi saepe, labore autem deleniti architecto molestiae itaque soluta velit inventore beatae recusandae alias dolores minus illo ipsam sint voluptates.
 
