@@ -60,10 +60,15 @@ add_action("init" , function(){
 
 // ajouter une nouvelle page dans le back office de notre site 
 // permettre de voir tous ceux qui se sont inscrits dans la table wp_newsletter
-
-add_action("admin_init" , function(){
-
-    add_menu_page( "newsletter", "newsletter", 'manage_options' , "newsletter") ; 
-    
+// admin_init => créer cette page lorsque le back office est chargé
+add_action("admin_menu" , function(){
+    add_menu_page( "newsletter", "newsletter", 'manage_options' , "newsletter" , "contenu_page_newsletter") ;
+    // newsletter => nom de la page
+    // newsletter => texte affiché dans la barre latérale du back office
+    // manage_options => le gestionnaire doit être administrateur pour pouvoir voir cette page dans le back office => 
+    // newsletter slug de l'url de la page 
 });
 
+function contenu_page_newsletter(){
+    echo '<h1>coucou</h1>';
+}
