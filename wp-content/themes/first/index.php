@@ -7,7 +7,7 @@
                 <?php the_post() ; ?>
                 <article class="col-4">
                     <div class="card card-<?= $i ?>">
-                        <h2 class="card-header">
+                        <h2 class="card-header" data-ajaxurl="<?= admin_url( 'admin-ajax.php' ) ?>" data-id="<?= $i ?>">
                             <?php echo $post->post_title ?>
                         </h2>
                         <!-- thumbnail : miniature -->
