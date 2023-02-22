@@ -13,10 +13,10 @@
                 </select>
                 <input type="submit" class="btn btn-primary mt-3 btn-sm" value="trier">
             </form>
-            <?php $query =  get_article_filtered_width_date("react") ?>
+            
         </aside>
         <div class="col">
-            <?php // var_dump($query) ?>
+        <?php $query =  get_article_filtered_with_date("react") ?>
             <div class="row">
                 <?php while($query->have_posts()) : ?>
                     <?php $query->the_post() ?>
@@ -32,6 +32,11 @@
                                 <?php the_excerpt() ?>
                             </div>
                             <?= categorie_badge(get_the_ID())  ?>
+
+                            <hr>
+
+                            <?php // the_category() ?>
+                            <?php // var_dump(get_the_category()) ?>
                         </div>
                         <?php wp_reset_postdata(); ?><!--  libérer la mémoire si j'ai besoin de faire une requête WP_Query() supplémentaire après -->
                     <?php endwhile ?>

@@ -52,7 +52,7 @@ function get_article_filtered(string $slug_categorie) :WP_Query {
     // SELECT * FROM articles WHERE date = "2023-01-01" ORDER BY prix ASC
 }
 
-function get_article_filtered_width_date(string $slug_categorie) :WP_Query{
+function get_article_filtered_with_date(string $slug_categorie) :WP_Query{
 
     $args = array(
         "category_name" => $slug_categorie 
@@ -62,6 +62,7 @@ function get_article_filtered_width_date(string $slug_categorie) :WP_Query{
         $args['orderby'] = "title";
         $args['order'] = $_GET["order"] ;
     }
+    // si il y a dans l'url ?date=   et que cette valeur est une date valide 2023-01-01
     if(!empty($_GET["date"]) && DateTime::createFromFormat("Y-m-d", $_GET["date"]) !== false ){
         $date = DateTime::createFromFormat("Y-m-d", $_GET["date"]);
         $args['date_query'] = [

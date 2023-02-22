@@ -52,6 +52,9 @@
                         </li>
                     </ul>
                 </li>
+                <li class="nav-item">
+                    <a href="<?= get_page_url("Contact") ?>" class="nav-link"> nous contacter </a>
+                </li>
             </ul>
         </nav>
     </header>

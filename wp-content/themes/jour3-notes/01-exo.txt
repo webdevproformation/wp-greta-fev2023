@@ -1,0 +1,15 @@
+1 créer une nouvelle page dans le back office : la page contact 
+
+2 cette page contient les blocs suivants : 
+titre : contact 
+contenu : 2 paragraphes 
+
+3 dans le dossier first, créer le fichier page-contact.php 
+
+mise en page :
+barre de menu
+titre de la page 
+les 2 paragraphes 
+
+4 ajouter le lien vers la page contact dans la barre de menu 
+
