@@ -123,7 +123,7 @@ if(!empty($_POST["email"]) && !empty($_POST["message"])){
             message TEXT
         )
     ");
-    $wpdb->get_row($create);
+    $wpdb->get_row($create); // execute()
     $query = $wpdb->prepare("INSERT INTO wp_contact 
         (email, message)
         VALUES
