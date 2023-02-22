@@ -70,5 +70,31 @@ add_action("admin_menu" , function(){
 });
 
 function contenu_page_newsletter(){
-    echo '<h1>coucou</h1>';
+    global $wpdb ;
+    $emails = $wpdb->prepare("SELECT * FROM wp_newsletter");
+    $resultat = $wpdb->get_results($emails);
+    $html = "<h1>Liste des utilisateurs inscrits à la newsletter</h1>";
+    $html .= "<table class='striped' style='width:100%'>";
+    $html .= "<tr>";
+    $html .= "<th>id</th>";
+    $html .= "<th>email</th>";
+    $html .= "</tr>";
+    foreach($resultat as $r){
+        $html .= "<tr>";
+        $html .= "<td>{$r->id}</td>";
+        $html .= "<td>{$r->email}</td>";
+        $html .= "</tr>";
+    }
+    $html .= "</table>";
+    echo $html;
 }
+
+$a = "bonjour";
+$phrase = "$a les amis";
+$phrase = "{$a} les amis";
+$phrase = $a . ' les amis';
+$etudiant = ["nom" => "alain"];
+$phrase2 = $etudiant["nom"] . " dit bonjour";
+$phrase2 = "{$etudiant["nom"]} dit bonjour";
+$phrase2 = "{$etudiant['nom']} dit bonjour";
+$phrase2 = "{$etudiant['nom']} dit bonjour";
