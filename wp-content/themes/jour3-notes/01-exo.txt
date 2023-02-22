@@ -27,3 +27,14 @@ id clé primaire INT NOT NULL AUTO_INCREMENT
 email VARCHAR(255)
 
 4 INsérer les informations saisies dans le formulaire dans la table 
+
+
+$connexion = new PDO("url" , "login" , "password")
+
+$connexion->query("DELETE FROM article WHERE id = 1"); // impossible 
+
+// $id = "1 ; DELETE FROM users;"
+// $connexion->query("DELETE FROM article WHERE id = $id"); // possibilité injection
+
+$sth = $connexion->prepare("DELETE FROM article WHERE id = :id");
+$sth->execute(["id" => 1]) ;
