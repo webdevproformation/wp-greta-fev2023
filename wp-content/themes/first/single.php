@@ -20,11 +20,22 @@
             <span>
                 <?php next_post_link( ) ?>
             </span>
-            
+
         </div>
         <hr>
         <?php comment_form() ?>
+        <hr>
+        <?php $commentaires = get_comments(); ?>
         
+        <ul class="list-group">
+            <?php foreach($commentaires as $c) : ?>
+                <li class="list-group-item">
+                    👤 : <?=  $c->comment_author_email ; ?> <br>
+                    📨 : <?=  $c->comment_content ; ?> <br>
+                    📆 : <?=  ( new DateTime($c->comment_date))->format("d/m/Y H:i:s") ; ?>
+                </li>
+            <?php endforeach ?>
+        </ul>
     <?php endwhile ?>
 </main>
 <?php get_footer() ?>
