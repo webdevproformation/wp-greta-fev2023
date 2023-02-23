@@ -25,17 +25,20 @@
         <hr>
         <?php comment_form() ?>
         <hr>
-        <?php $commentaires = get_comments(); ?>
-        
-        <ul class="list-group">
-            <?php foreach($commentaires as $c) : ?>
-                <li class="list-group-item">
-                    👤 : <?=  $c->comment_author_email ; ?> <br>
-                    📨 : <?=  $c->comment_content ; ?> <br>
-                    📆 : <?=  ( new DateTime($c->comment_date))->format("d/m/Y H:i:s") ; ?>
-                </li>
-            <?php endforeach ?>
-        </ul>
+        <?php $commentaires = get_comments(["post_id" => get_the_ID()]); ?>
+        <?php if(count($commentaires) === 0) : ?>
+            <p>Aucun commentaire pour l'instant</p>
+        <?php else : ?>
+            <ul class="list-group">
+                <?php foreach($commentaires as $c) : ?>
+                    <li class="list-group-item">
+                        👤 : <?=  $c->comment_author_email ; ?> <br>
+                        📨 : <?=  $c->comment_content ; ?> <br>
+                        📆 : <?=  ( new DateTime($c->comment_date))->format("d/m/Y H:i:s") ; ?>
+                    </li>
+                <?php endforeach ?>
+            </ul>
+        <?php endif ?>
     <?php endwhile ?>
 </main>
 <?php get_footer() ?>
