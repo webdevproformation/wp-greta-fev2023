@@ -55,6 +55,9 @@
                 <li class="nav-item">
                     <a href="<?= get_page_url("Contact") ?>" class="nav-link"> nous contacter </a>
                 </li>
+                <li class="nav-item">
+                    <a href="<?php echo get_post_type_archive_link("produits") ?>"  class="nav-link">catalogue</a>
+                </li>
             </ul>
             <form action="<?= get_option("home") ?>" class="ms-auto d-flex">
                 <input type="text" placeholder="rechercher" name="s" class="form-control me-2" value="<?= get_search_query() ?>">

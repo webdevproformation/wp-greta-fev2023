@@ -146,7 +146,8 @@ add_action("init" , function(){
     $args = [
         "label" => "produits",
         "public" => true,
-        "supports" => ["title" , "editor" , "thumbnail" , "custom-fields"]
+        "supports" => ["title" , "editor" , "thumbnail" , "custom-fields"],
+        "has_archive" => true
     ];
     register_post_type("produits" , $args );
     // titre nom produit
