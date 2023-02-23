@@ -56,5 +56,10 @@
                     <a href="<?= get_page_url("Contact") ?>" class="nav-link"> nous contacter </a>
                 </li>
             </ul>
+            <form action="<?= get_option("home") ?>" class="ms-auto d-flex">
+                <input type="text" placeholder="rechercher" name="s" class="form-control me-2">
+                <input type="submit" class="btn btn-danger btn-sm">
+            </form>
+            <!-- http://localhost/demo/?s=article -->
         </nav>
     </header>

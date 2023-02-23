@@ -1,0 +1,19 @@
+=> http://localhost/demo/exemple-1/
+
+=> ?? qu'est ce que s'est ??? => page 
+
+template hierarchie => page-exemple-1.php => exécute 
+
+effectuer une requete en base de données 
+
+récupérer le contenu de la page exemple-1
+
+la page ensemble de bloc 
+=> the_content()
+=> short_code([form_newsletter]) 
+
+??? il y a un add_shortcode("form_newsletter", function(){
+    return "<h1></h1>"
+})
+
+=> functions.php / dans un plugin xxx 
