@@ -11,7 +11,7 @@
     $input_hidden = wp_nonce_field("formulaire" , "contact") ;
     return "
         <form method='POST' class='d-flex' style='width:400px'>
-            <input type='email' class='form-control' placeholder='votre@email.fr' name='email'>
+            <input type='email' class='form-control' placeholder='votre@email.fr' name='newsletter_email'>
             $input_hidden
             <input type='submit' class='btn btn-warning ms-3'>
         </form>
@@ -28,10 +28,10 @@ add_shortcode("form_newsletter" , "add_form_newsletter");
 // pour exécuter en + des traitements sur des $_POST 
 add_action("init" , function(){
 
-    if(!empty($_POST["email"])){
+    if(!empty($_POST["newsletter_email"])){
 
         // est ce que l'email saisit est un email conforme ?? 
-        if( !filter_var( $_POST["email"] , FILTER_VALIDATE_EMAIL ) ) return ;
+        if( !filter_var( $_POST["newsletter_email"] , FILTER_VALIDATE_EMAIL ) ) return ;
     
         /* var_dump(wp_verify_nonce( $_POST["contact"] , "formulaire" ));
         wp_die(); */ 
@@ -51,7 +51,7 @@ add_action("init" , function(){
                 (email)
                 VALUES 
                 (%s)
-        " , [$_POST["email"]]);
+        " , [$_POST["newsletter_email"]]);
         $wpdb->get_row($insert);
     }
 

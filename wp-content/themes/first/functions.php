@@ -142,3 +142,16 @@ add_action('init' , function(){
 });
 
 
+add_action("init" , function(){
+    $args = [
+        "label" => "produits",
+        "public" => true,
+        "supports" => ["title" , "editor" , "thumbnail" , "custom-fields"]
+    ];
+    register_post_type("produits" , $args );
+    // titre nom produit
+    // description contenu 
+    // image image principale du produit
+    // prix 
+});
+
