@@ -132,3 +132,13 @@ if(!empty($_POST["email"]) && !empty($_POST["message"])){
 }
 
 
+
+// activer la fonctionnalité d'avoir des widgets dans notre thème 
+add_action('init' , function(){
+    register_sidebar([
+        "name" => "search",
+        "id" => "search" 
+    ]);
+});
+
+
