@@ -57,7 +57,7 @@
                 </li>
             </ul>
             <form action="<?= get_option("home") ?>" class="ms-auto d-flex">
-                <input type="text" placeholder="rechercher" name="s" class="form-control me-2">
+                <input type="text" placeholder="rechercher" name="s" class="form-control me-2" value="<?= get_search_query() ?>">
                 <input type="submit" class="btn btn-danger btn-sm">
             </form>
             <!-- http://localhost/demo/?s=article -->

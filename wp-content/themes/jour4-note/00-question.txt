@@ -17,3 +17,21 @@ la page ensemble de bloc
 })
 
 => functions.php / dans un plugin xxx 
+
+
+------
+
+créer dans un nouveau fichier dans le dossier thème single.php (template hierarchie)
+
+single (célibataire) 
+récupérer le header et le footer 
+lancer un boucle pour récupérer le contenu de l'article 
+titre
+image à la une 
+contenu 
+date de création / auteur 
+passer d'une article à l'autre .
+
+=> rechercher sur internet (documentation de wp ) comment afficher la zone de commentaire sous l'article ?? 
+
+
