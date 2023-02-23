@@ -39,3 +39,9 @@
 .category-php .bg-primary a{
     color:black;
 }
+
+#comment{
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+}
